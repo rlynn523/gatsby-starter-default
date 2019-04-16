@@ -27,6 +27,31 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: 'gatsby-source-apiserver',
+      options: {
+        entitiesArray: [
+          {
+            url: 'https://swapi.co/api/planets/',
+            method: 'get',
+            name: 'data',
+            typePrefix: 'planets',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          },
+          {
+            url: 'https://swapi.co/api/people/',
+            method: 'get',
+            name: 'data',
+            typePrefix: 'characters',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          },
+        ],
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
