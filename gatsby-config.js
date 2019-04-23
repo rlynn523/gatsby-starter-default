@@ -32,7 +32,7 @@ module.exports = {
       options: {
         entitiesArray: [
           {
-            url: 'https://swapi.co/api/planets/',
+            url: 'http://swapi.co/api/planets/',
             method: 'get',
             name: 'data',
             typePrefix: 'planets',
@@ -41,7 +41,7 @@ module.exports = {
             },
           },
           {
-            url: 'https://swapi.co/api/people/',
+            url: 'http://swapi.co/api/people/',
             method: 'get',
             name: 'data',
             typePrefix: 'characters',
